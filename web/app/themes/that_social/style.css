@@ -1,0 +1,656 @@
+/*
+Theme Name: That Social Girl
+Description: A WordPress Blog Theme, based on Rosemary by Solopine
+Author: Paul Valenzano
+Author URI: http://paulvalenzano.com/
+Version: 0.1
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
+/* ----------------------------------------------- */
+/* Global Layout
+/* ----------------------------------------------- */
+
+	body {
+		background:#fff;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		color:#424242;
+		font-size:15px;
+		min-height: 100vh;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.wrapper {
+		box-sizing: border-box;
+		min-height: 100vh;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+
+	.main {
+
+	}
+
+	header {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+
+
+	footer {
+		background: #333;
+		color: #aaa;
+		font-size: 0.75em;
+		font-style: italic;
+
+		height: 50px;
+		margin-top: 50px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+/* ----------------------------------------------- */
+/* Navigation */
+/* ----------------------------------------------- */
+
+	#top-bar {
+		width:100%;
+		height: 60px;
+		z-index:9999;
+	}
+
+	#navigation {
+		z-index: 9999;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	#logo {
+		margin-right: auto;
+	}
+
+	#logo a {
+		text-indent: -5000px;
+		display: block;
+		height: 60px;
+		width: 235px;
+		background: url('img/logo-black-L.png') top left no-repeat;
+
+	}
+
+	#logo img {
+		height: 45px;
+		padding-top: 5px;
+	}
+
+	/*#main-menu {
+		display: none;
+	}*/
+
+	#mobile-menu {
+		display: none;
+	}
+
+	/*#mobile-menu {
+		z-index: 9999;
+		width: 100vh;
+		height: 100vh;
+		background: rgba(0,0,0,0.8);
+	}
+
+	.slicknav_menu {
+		display: block;
+		z-index: 9999;
+	}*/
+
+
+	.menu {
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 300;
+		font-size: 20px;
+		text-transform: uppercase;
+
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+
+	.menu a {
+		padding: 8px 16px;
+	}
+
+	.current-menu-item > a {
+		color: #81ccda;
+		border-bottom: solid 1px #81ccda;
+	}
+
+
+
+
+/* ----------------------------------------------- */
+/* Featured Content
+/* ----------------------------------------------- */
+
+.featured {
+	margin-bottom: 32px;
+	display: flex;
+	flex-flow: column;
+	align-content: space-between;
+}
+
+.featured > * {
+	margin-bottom: 8px;
+}
+
+.featured__hero {
+	min-height: 75vh;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-end;
+
+	border: solid 1px #eee;
+}
+
+.featured__list {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.featured__list-item {
+	flex: 1 40%;
+	height: 200px;
+	margin: 0px 8px 0px 0px;
+	border: solid 1px #eee;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+}
+
+.featured__list > :first-child {
+	flex: 2 100%;
+	height: 250px;
+	margin: 0px 0px 8px 0px;
+}
+
+.featured__list > :last-child {
+	margin: 0px;
+}
+
+.featured__callout {
+	padding: 16px 32px 16px 32px;
+	width: 80%;
+	margin-bottom: 100px;
+	background: rgba(255,255,255,0.8);
+	text-align: center;
+	box-sizing: border-box;
+	border: solid 1px #ccc;
+
+}
+
+.featured__callout:hover {
+	color: #000;
+	background: rgba(255,255,255,0.95);
+	border-color: #81ccda;
+}
+
+.featured__list-item .featured__callout {
+	display: block;
+	padding: 8px 16px;
+	width: 100%;
+	bottom: 16px;
+	text-align: left;
+	margin-bottom: 16px;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.featured__list-item span {
+	font-size: 0.75em;
+}
+
+
+
+/* ----------------------------------------------- */
+/* Page Content */
+/* ----------------------------------------------- */
+
+.content {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+}
+
+
+/* ----------------------------------------------- */
+/* Post Lists */
+/* ----------------------------------------------- */
+
+.post__list-item {
+	margin-right: 1em;
+	margin-left: 1em;
+	margin-bottom: 1em;
+
+	display: flex;
+	box-sizing: border-box;
+}
+
+.post__image {
+	height: 175px;
+	border: solid 1px #ccc;
+	margin-right: 16px;
+}
+
+.post__category {
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	display: block;
+}
+
+.post__excerpt,
+.post__date {
+	font-size: 0.75em;
+}
+
+.post__date {
+	clear: both;
+	color: #666;
+	font-style: italic;
+}
+
+
+/* ----------------------------------------------- */
+/* Grid List Variant */
+/* ----------------------------------------------- */
+
+
+.grid-list {
+	display: flex;
+	flex-flow: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	border-left: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+}
+
+.grid-list .post__list-item {
+	margin-right: 0px;
+}
+
+.grid-list .post__image {
+	width: 325px;
+	height: 250px;
+	margin-right: 0px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.grid-list .featured__callout {
+	width: 100%;
+	margin-bottom: 1em;
+	padding: 8px;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+
+/* ----------------------------------------------- */
+/* Gallery Scroll */
+/* ----------------------------------------------- */
+
+.gallery-scroll {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+.gallery-scroll > * {
+	margin: 8px;
+}
+
+.gallery-scroll img {
+	width: 100%;
+	height: auto;
+	border: solid 1px #ccc;
+}
+
+/* ----------------------------------------------- */
+/* Gallery Grid */
+/* ----------------------------------------------- */
+
+/*.gallery__grid-item img {
+	width: 100%;
+	height: auto;
+}*/
+
+/**
+ * Placerholder css
+ */
+.wookmark-placeholder {
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  z-index: -1;
+}
+
+/**
+ * Grid container
+ */
+.tiles-wrap {
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  margin: 10px 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+}
+
+
+/**
+ * Grid items
+ */
+.tiles-wrap li {
+  display: block;
+  opacity: 0;
+  text-align: center;
+  list-style-type: none;
+  background-color: #fff;
+  float: left;
+  cursor: pointer;
+  /*width: 200px;*/
+  padding: 4px;
+  border: 1px solid #dedede;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+.tiles-wrap.wookmark-initialised.animated li {
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.tiles-wrap.wookmark-initialised li {
+  opacity: 1;
+}
+
+.tiles-wrap li.wookmark-inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tiles-wrap li:hover {
+  background-color: #fafafa;
+}
+
+.tiles-wrap img {
+  display: block;
+}
+
+.tiles-wrap a {
+  color: #555;
+  text-align: center;
+  /* display: table-cell; */
+  /*width: 200px;
+  height: 200px;*/
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tile-loading:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ddd;
+  content: "Loading\2026";
+  padding-top: 20px;
+  color: #999;
+}
+
+/**
+ * Filters
+ */
+#filters {
+  list-style-type: none;
+  text-align: center;
+  margin: 0 5% 0 5%;
+}
+
+#filters:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#filters li {
+  font-size: 12px;
+  float: left;
+  padding: 6px 8px 4px;
+  cursor: pointer;
+  margin: 0 10px;
+  -webkit-transition: all 0.15s ease-out;
+     -moz-transition: all 0.15s ease-out;
+       -o-transition: all 0.15s ease-out;
+          transition: all 0.15s ease-out;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+#filters li:hover {
+  background: #4281f5;
+  color: #ffffff;
+}
+
+#filters li.active {
+  background: #4281f5;
+  color: #ffffff;
+}
+
+
+/* ----------------------------------------------- */
+/* Single Page Content */
+/* ----------------------------------------------- */
+
+.post__heading {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+
+
+/* ----------------------------------------------- */
+/* Breakpoint 1 -- 875 */
+/* ----------------------------------------------- */
+
+@media all and (min-width: 875px){
+
+	.menu {
+		display: flex;
+		flex-flow: row;
+		justify-content: flex-end;
+	}
+
+	.wrapper {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	.featured__list > :first-child,
+	.featured__list-item {
+		flex: 1;
+		height: 250px;
+	}
+
+	.featured__list > :first-child {
+		margin: 0px 8px 0px 0px;
+	}
+
+	.featured__hero {
+		min-height: 60vh;
+	}
+
+	.content {
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.content > * {
+		flex: 3;
+	}
+
+	.content > :first-child {
+		flex: 2;
+	}
+
+	.grid-list .post__image {
+		width: 325px;
+		height: 250px;
+	}
+
+}
+
+
+/* ----------------------------------------------- */
+/* Breakpoint 2 -- 1200 */
+/* ----------------------------------------------- */
+
+@media all and (min-width: 1200px){
+
+	.wrapper {
+		padding-left: 16px;
+		padding-right: 16px;
+		max-width: 1200px;
+	}
+
+	.featured {
+		flex-flow: row;
+		justify-content: space-around;
+		max-height: 600px;
+	}
+
+	.featured__hero {
+		min-height: 50vh;
+		flex: 3;
+	}
+
+	.featured__list {
+		flex-flow: column;
+		justify-content: space-around;
+		flex: 1;
+	}
+
+	.featured__list > :first-child,
+	.featured__list-item {
+		margin: 0px 0px 8px 8px;
+	}
+	.featured__list > :last-child {
+		margin: 0px 0px 0px 8px;
+	}
+
+	.content > * {
+		flex: 1;
+	}
+
+	.content > :first-child {
+		flex: 1;
+	}
+
+	.grid-list .post__list-item {
+		width: 265px;
+	}
+
+	.grid-list .post__image {
+		height: 200px;
+	}
+
+
+}
+
+
+/* ----------------------------------------------- */
+/* Content Styles */
+/* ----------------------------------------------- */
+
+
+p {
+	line-height: 1.5em;
+	margin: 0em 1em 1.5em 1em;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+	color: #81ccda;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Fjalla One', sans-serif;
+	text-transform: uppercase;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1em; }
+
+.section-heading {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	font-size: 36px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+.copy-frame {
+	border-left: solid 1px #ccc;
+}
+
+/* ----------------------------------------------- */
+/* Helpers */
+/* ----------------------------------------------- */
+
+.shown {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.background-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}

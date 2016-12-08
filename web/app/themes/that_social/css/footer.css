@@ -1,0 +1,52 @@
+
+/*****
+/** Footer Instagram
+/***********************/
+
+#instagram-footer {
+	text-align:center;
+	overflow:hidden;
+}
+.instagram-title {
+	font-size:16px;
+	text-transform:uppercase;
+	margin-bottom:22px;
+}
+#instagram-footer .instagram-pics li {
+	width:16.66666666666667%;
+	display:inline;
+	float:left;
+}
+#instagram-footer .instagram-pics li img {
+	max-width:100%;
+}
+#instagram-footer .instagram-pics li img:hover {
+	opacity:.87;
+}
+#instagram-footer p.clear {
+	font-size: 11px;
+	border-bottom: 1px solid #eee;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+/*****
+/** Footer
+/***********************/
+
+#footer {
+	padding: 16px 0 28px;
+	overflow:hidden;
+}
+
+#footer .copyright {
+	font-style:italic;
+	font-size:12px;
+	color:#888;
+}
+#footer .copyright.left {
+	float:left;
+}
+#footer .copyright.right {
+	float:right;
+}
