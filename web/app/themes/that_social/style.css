@@ -96,7 +96,8 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 		display: none;
 	}*/
 
-	#mobile-menu {
+	#mobile-menu,
+	#mobile-menu-toggle {
 		display: none;
 	}
 
