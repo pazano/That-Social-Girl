@@ -78,7 +78,14 @@
 						<?php
 
 						  $args = [
-						    'post_type' => 'post',
+						    'post_type' => 'photography',
+								'meta_query' => array(
+									array(
+										'key' => 'type',
+										'value' => 'Session',
+										'compare' => '=='
+									)
+								),
 						  ];
 
 						  $query = new WP_Query( $args );
@@ -86,7 +93,7 @@
 
 						<?php if( $query->have_posts() ) : ?>
 
-							<h2 class="section-heading">Recent Updates</h2>
+							<h2 class="section-heading">Recent Sessions</h2>
 
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
