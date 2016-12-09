@@ -86,8 +86,8 @@ jQuery(document).ready(function($) {
 			wookmark = new Wookmark('.gallery__grid', {
 				align: 'left',
 				autoResize: 'true',
-				itemWidth: 320,
-				outerOffset: 8
+				itemWidth: 304
+
 			});
 		});
 

@@ -61,14 +61,11 @@ function solopine_load_scripts() {
 	// wp_register_style('slicknav-css', get_template_directory_uri() . '/css/slicknav.css');
 	wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 	wp_register_style('responsive', get_template_directory_uri() . '/css/responsive.css');
-	// wp_register_style('menu-overlay', get_template_directory_uri() . '/css/menu-overlay.css');
-	// wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.js');
-	// wp_register_script('classie', get_template_directory_uri() . '/js/classie.js', true);
-	wp_register_script('imagesloaded', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.min.js', 'jquery', '', true);
-	wp_register_script('magnific-popup', get_template_directory_uri() . '/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js', 'jquery', '', true);
-	wp_register_script('wookmark', get_template_directory_uri() . '/js/wookmark.min.js', 'jquery', '', true);
-	wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', 'jquery', '', true);
-	wp_register_script('initialize', get_template_directory_uri() . '/js/init.js', 'jquery', '', true);
+	wp_register_script('imagesloaded', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.min.js', array('jquery'), '', true);
+	wp_register_script('magnific-popup', get_template_directory_uri() . '/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js', array('jquery'), '', true);
+	wp_register_script('wookmark', get_template_directory_uri() . '/js/wookmark.js', array('jquery'), '', true);
+	wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), '', true);
+	wp_register_script('initialize', get_template_directory_uri() . '/js/init.js', array('jquery'), '', true);
 
 
 	// Enqueue scripts and styles
@@ -78,7 +75,6 @@ function solopine_load_scripts() {
 	wp_enqueue_style('main-css');
 	wp_enqueue_style('footer-css');
 	wp_enqueue_style('magnific-popup-css');
-	// wp_enqueue_style('menu-overlay');
 	wp_enqueue_style('wp-core-css');
 	wp_enqueue_style('font-awesome');
 
@@ -87,14 +83,8 @@ function solopine_load_scripts() {
 	wp_enqueue_script('imagesloaded');
 	wp_enqueue_script('magnific-popup');
 	wp_enqueue_script('wookmark');
-	// wp_enqueue_script('modernizr');
 	wp_enqueue_script('fitvids');
-	// wp_enqueue_script('classie');
 	wp_enqueue_script('initialize');
-
-
-
-	if (is_singular() && get_option('thread_comments'))	wp_enqueue_script('comment-reply');
 
 }
 
