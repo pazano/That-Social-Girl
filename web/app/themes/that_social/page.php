@@ -1,11 +1,7 @@
 
 <?php get_header(); ?>
 
-	<div class="container row">
-
-		<div id="content">
-
-			<div id="main">
+	<section id="main" class="container">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -15,6 +11,6 @@
 
 				<?php endif; ?>
 
-			</div>
+	</section>
 
 <?php get_footer(); ?>

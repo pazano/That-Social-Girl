@@ -61,7 +61,7 @@ function solopine_load_scripts() {
 	// wp_register_style('slicknav-css', get_template_directory_uri() . '/css/slicknav.css');
 	wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 	wp_register_style('responsive', get_template_directory_uri() . '/css/responsive.css');
-	wp_register_script('imagesloaded', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.min.js', array('jquery'), '', true);
+	wp_register_script('imagesloaded', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.min.js', '', '', false);
 	wp_register_script('magnific-popup', get_template_directory_uri() . '/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js', array('jquery'), '', true);
 	wp_register_script('wookmark', get_template_directory_uri() . '/js/wookmark.js', array('jquery'), '', true);
 	wp_register_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), '', true);

@@ -141,6 +141,9 @@ a img.aligncenter {
 .wpcf7 input {
 	width:266px;
 }
+.wpcf7 input[type=checkbox] {
+  width: 20px;
+}
 div.wpcf7 {
 	overflow:hidden;
 	margin-top:40px;
@@ -156,7 +159,11 @@ div.wpcf7 {
 	margin-bottom:6px;
 }
 .wpcf7 textarea {
-	width:95%;
+	width:50%;
+}
+span.wpcf7-list-item {
+  display: block;
+  margin: 0 0 0 1em;
 }
 .wpcf7 .wpcf7-submit {
 	background:#eee;
