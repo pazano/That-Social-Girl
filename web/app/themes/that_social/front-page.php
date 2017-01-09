@@ -40,12 +40,13 @@
 									$image = get_sub_field( 'feature_image' );
 									$label = get_sub_field( 'feature_label' );
 									$description = get_sub_field( 'feature_description' );
-							    $link = ( get_sub_field( 'feature_link_type' ) == 'Local Content') ? get_sub_field( 'content_link') : get_sub_field( 'url' );
+									$type = get_sub_field( 'feature_link_type' );
+							    $link = ( $type == 'Local Content') ? get_sub_field( 'content_link') : get_sub_field( 'url' );
 								?>
 
 								<div class="featured__list-item background-cover" style="background-image: url('<?= $image['sizes']['misc-thumb']; ?>');">
 
-										<a class="featured__callout" href="<?= $link ?>">
+										<a class="featured__callout" href="<?= $link ?>" <?php if( $type == 'Offsite Link' ): ?> target="_blank" <?php endif; ?>>
 											<h3><?= $label; ?></h3>
 											<span><?= $description; ?></span>
 										</a>
