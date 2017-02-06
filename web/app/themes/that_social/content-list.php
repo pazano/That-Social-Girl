@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('post__list-item'); ?>>
 
 	<?php if(has_post_thumbnail()) : ?>
-		<img class="post__image" src="<?php the_post_thumbnail_url('misc-thumb'); ?>" />
+		<a href="<?= get_permalink(); ?>"><img class="post__image" src="<?php the_post_thumbnail_url('misc-thumb'); ?>" /></a>
 	<?php endif; ?>
 
 		<div class="post__content">

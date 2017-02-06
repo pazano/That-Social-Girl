@@ -27,7 +27,7 @@
 
 				<?php if( $query->have_posts() ) : ?>
 
-					<h2 class="section-heading">Collections</h2>
+					<h2 class="heading__section">Collections</h2>
 					<div class="grid-list">
 
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
